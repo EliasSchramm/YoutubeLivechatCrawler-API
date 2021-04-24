@@ -33,7 +33,7 @@ async function getData(stream_id){
 
             const query = { stream_id: stream_id };    
             const options = {
-                projection: { _id: 0, channel_id: 1, channel_name: 1, avg_mgs_pm: 1, avg_views: 1, stream_id: 1, lang: 1, lang_p: 1, highlights : 1 },
+                projection: { _id: 0, channel_id: 1, channel_name: 1, avg_mgs_pm: 1, avg_views: 1, stream_id: 1, lang: 1, lang_p: 1, highlights : 1, mgs_total: 1 },
             };
 
             ret = await collection.findOne(query, options)
