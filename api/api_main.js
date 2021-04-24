@@ -20,7 +20,7 @@ app.get('*', function(req, res){
 });
   
 
-const server = http.createServer({
+const server = https.createServer({
     key: fs.readFileSync('server.key'),
     cert: fs.readFileSync('server.cert')
 }, app)
